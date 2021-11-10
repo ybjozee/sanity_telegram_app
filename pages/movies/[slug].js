@@ -31,7 +31,7 @@ export const getStaticProps = async ({params}) => {
 
 export const getStaticPaths = async () => {
     const paths = await sanityClient.fetch(
-        `*[_type == "product" && defined(slug.current)][].slug.current`
+        `*[_type == "movie" && defined(slug.current)][].slug.current`
     );
 
     return {
